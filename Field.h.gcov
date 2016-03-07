@@ -1,0 +1,38 @@
+        -:    0:Source:./Field.h
+        -:    0:Graph:FieldTest.gcno
+        -:    0:Data:FieldTest.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#ifndef FIELD_H
+        -:    2:#define FIELD_H
+        -:    3:
+        -:    4:#include <vector>
+        -:    5:
+        -:    6:/**
+        -:    7: * For keeping track of whether a location has a mine
+        -:    8: * or empty space as well as whether it is shown or hidden
+        -:    9:**/
+        -:   10:enum FieldType
+        -:   11:{
+        -:   12:	MINE_SHOWN,
+        -:   13:	MINE_HIDDEN,
+        -:   14:	EMPTY_SHOWN,
+        -:   15:	EMPTY_HIDDEN
+        -:   16:};
+        -:   17:
+       10:   18:class Field
+        -:   19:{
+        -:   20:	public:
+        -:   21:		Field();
+        -:   22:		bool isSafe(int, int);
+        -:   23:		FieldType get(int,int);
+        -:   24:		void revealAdjacent(int, int);
+        -:   25:		void placeMine(int, int);
+        -:   26:		
+        -:   27:
+        -:   28:	private:
+        -:   29:		static const int FIELD_DIMENSION = 10;
+        -:   30:		std::vector< std::vector<FieldType> > _map;	
+        -:   31:};
+        -:   32:
+        -:   33:#endif //FIELD_H
