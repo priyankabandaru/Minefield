@@ -4,7 +4,7 @@
 
 # Points to the root of Google Test. Change it to reflect where your
 # clone of the googletest repo is
-GTEST_DIR =  /googletest
+GTEST_DIR =  /googletest/incude/gtest
 
 # Flags passed to the preprocessor and compiler
 CPPFLAGS += --coverage -isystem $(GTEST_DIR)/include
