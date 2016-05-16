@@ -1,5 +1,4 @@
 language: c++
-compiler: g++
+compiler: gcc
 script:
-  - make
-  - ./FieldTest
+  - make FieldTest
